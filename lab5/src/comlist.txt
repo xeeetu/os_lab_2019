@@ -1,0 +1,11 @@
+
+make mutex
+make no_mutex
+./mutex
+./no_mutex
+make clean
+
+make factorial
+./factorial -k 5 --mod 50 --pnum 4
+Factorial 5 by mod 50 = 20
+make clean
