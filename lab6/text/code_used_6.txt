@@ -1,0 +1,8 @@
+В разных терминалах:
+cd lab6/src/
+make
+./server --port 20001 --tnum 2 --servers serv.txt
+
+cd lab6/src/
+./client --k 10 --mod 4000000 --servers serv.txt > ../text/result.txt
+
