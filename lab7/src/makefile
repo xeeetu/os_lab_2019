@@ -1,16 +1,11 @@
 CC=gcc
-CFLAGS=-std=c99 -w
+CFLAGS=-I.
 
-all : tcpClient tcpServer udpClient udpServer
+all:
+	$(CC) -o tcpcl tcpclient.c  
+	$(CC) -o tcpserv tcpserver.c 
+	$(CC) -o udpcl udpclient.c 
+	$(CC) -o udpserv udpserver.c 
 
-tcpClient : tcpclient.c
-	$(CC) -o $@ $^ $(CFLAGS)
-
-tcpServer : tcpserver.c
-	$(CC) -o $@ $^ $(CFLAGS)
-
-udpClient : udpclient.c
-	$(CC) -o $@ $^ $(CFLAGS)
-
-udpServer : udpserver.c
-	$(CC) -o $@ $^ $(CFLAGS)
+clean:
+	rm udpserv udpcl tcpserv tcpcl

@@ -1,0 +1,16 @@
+------------TCP_TEST-----------------
+
+---SERVER----
+./tcpserv --port 20001 --bufsize 4
+
+---CLIENT----
+./tcpcl --port 20001 --bufsize 4 --ip 127.0.0.1
+
+
+------------UDP_TEST-----------------
+
+---SERVER----
+./udpserv --port 20001 --bufsize 4
+
+---CLIENT----
+./udpcl --port 20001 --bufsize 4 --ip 127.0.0.1
